@@ -156,15 +156,19 @@ export default new Vuex.Store({
 ```
 
 ## Vuex の全体図
-!(Vuex の全体図)[./vuex.diagram.png]
+![Vuex の全体図](./vuex.diagram.png)
 
 ## state を参照する
 1. ストアの中に state を用意してコンポーネントの computed で参照する
 
-!(state を参照する)[./ref_state_in_composents.vuex.png]
+![state を参照する](./ref_state_in_composents.vuex.png)
 
 ## Actions を dispatch する
 2. methods の中なりライフサイクルの中なりから、 **Actions** を **dispatch** する
 
-!(Actions を dispatch する)[./dispatch_actions.vuex.png]
+![Actions を dispatch する](./dispatch_actions.vuex.png)
 
+## Mutations へ commitする
+3. **Actions** の中から **Mutations** へ **Commit** する
+
+![Mutations へ commit する](./commit_to_mutations.vuex.png)
