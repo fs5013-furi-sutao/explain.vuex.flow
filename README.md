@@ -172,3 +172,24 @@ export default new Vuex.Store({
 3. **Actions** の中から **Mutations** へ **Commit** する
 
 ![Mutations へ commit する](./commit_to_mutations.vuex.png)
+
+## state を更新する
+4. Mutation の中から state に新しい値を入れる
+
+![state を更新する](update_state.vuex.png)
+
+この 4 つで 1 サイクルが基本となる。
+
+## まとめ
+![まとめ](./whole.vuex.png)
+
+## なんで Actions と Mutations は別れているの？
+Actions と Mutations が別れているのは、責務の分離のため。methods に書きたいロジックの中から共通化できそうな部分は Actions や mutation に移していくのがスマート。
+
+API 通信などの非同期処理は必ず Actions で行う。
+
+一方、Mutations は、Actions から payload を受け取って、そのまま state に格納する場合や、一定の加工を行って state に格納するのに Mutations を使うとよい。
+
+Actions や Mutations は受け取った値をそのまま次のプロセスへ渡すこともあり、その場合にはただセッターが生えているような短いコードになる。
+
+state に対して書き込みを行えるのは Mutations からのみとなる。
