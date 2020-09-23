@@ -156,7 +156,7 @@ export default new Vuex.Store({
 ```
 
 ## Vuex の全体図
-![Vuex の全体図](./vuex.diagram.png)
+!(Vuex の全体図)[./vuex.diagram.png]
 
 ## state を参照する
 1. ストアの中に state を用意してコンポーネントの computed で参照する
