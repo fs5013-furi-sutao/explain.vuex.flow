@@ -1,7 +1,18 @@
 # explain.vuex.flow
 Vuex の流れを理解する
+]
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
 ## サンプルコード
+![カウンターアプリ](./images/vuex.counter.gif)
 
 ### App.vue
 ```javascript
@@ -156,32 +167,32 @@ export default new Vuex.Store({
 ```
 
 ## Vuex の全体図
-![Vuex の全体図](./vuex.diagram.png)
+![Vuex の全体図](./images/vuex.diagram.png)
 
 ## state を参照する
 1. ストアの中に state を用意してコンポーネントの computed で参照する
 
-![state を参照する](./ref_state_in_composents.vuex.png)
+![state を参照する](./images/ref_state_in_composents.vuex.png)
 
 ## Actions を dispatch する
 2. methods の中なりライフサイクルの中なりから、 **Actions** を **dispatch** する
 
-![Actions を dispatch する](./dispatch_actions.vuex.png)
+![Actions を dispatch する](./images/dispatch_actions.vuex.png)
 
 ## Mutations へ commitする
 3. **Actions** の中から **Mutations** へ **Commit** する
 
-![Mutations へ commit する](./commit_to_mutations.vuex.png)
+![Mutations へ commit する](./images/commit_to_mutations.vuex.png)
 
 ## state を更新する
 4. Mutation の中から state に新しい値を入れる
 
-![state を更新する](update_state.vuex.png)
+![state を更新する](./images/update_state.vuex.png)
 
 この 4 つで 1 サイクルが基本となる。
 
 ## まとめ
-![まとめ](./whole.vuex.png)
+![まとめ](./images/whole.vuex.png)
 
 ## なんで Actions と Mutations は別れているの？
 Actions と Mutations が別れているのは、責務の分離のため。methods に書きたいロジックの中から共通化できそうな部分は Actions や mutation に移していくのがスマート。
